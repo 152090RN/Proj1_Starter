@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Manager GUI</title>
+</head>
+<body>
+  <h1>Password Manager</h1>
+
+  <!-- Initialize Keychain -->
+  <div id="initialize-section">
+    <h2>Initialize Keychain</h2>
+    <input type="password" id="master-password" placeholder="Enter master password">
+    <button onclick="initializeKeychain()">Initialize Keychain</button>
+  </div>
+
+  <!-- Add Password -->
+  <div id="add-section">
+    <h2>Add Password</h2>
+    <input type="text" id="add-domain" placeholder="Enter domain">
+    <input type="password" id="add-password" placeholder="Enter password">
+    <button onclick="addPassword()">Add Password</button>
+  </div>
+
+  <!-- Get Password -->
+  <div id="get-section">
+    <h2>Get Password</h2>
+    <input type="text" id="get-domain" placeholder="Enter domain">
+    <button onclick="getPassword()">Get Password</button>
+    <p id="get-result"></p>
+  </div>
+
+  <!-- Remove Password -->
+  <div id="remove-section">
+    <h2>Remove Password</h2>
+    <input type="text" id="remove-domain" placeholder="Enter domain">
+    <button onclick="removePassword()">Remove Password</button>
+  </div>
+
+  <!-- Dump Keychain -->
+  <div id="dump-section">
+    <h2>Dump Keychain</h2>
+    <button onclick="dumpKeychain()">Dump Keychain</button>
+    <pre id="dump-result"></pre>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
